@@ -1,0 +1,78 @@
+2025-08-22 15:01:19.4506 | WARN | Microsoft.AspNetCore.Hosting.Diagnostics | Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'https://+:443;http://+:80'. 
+2025-08-22 15:01:19.4594 | WARN | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | The WebRootPath was not found: /app/wwwroot. Static files may be unavailable. 
+2025-08-22 15:01:19.6381 | INFO | Microsoft.Hosting.Lifetime | Now listening on: https://[::]:443 
+2025-08-22 15:01:19.6381 | INFO | Microsoft.Hosting.Lifetime | Now listening on: http://[::]:80 
+2025-08-22 15:01:19.6381 | INFO | Microsoft.Hosting.Lifetime | Application started. Press Ctrl+C to shut down. 
+2025-08-22 15:01:19.6381 | INFO | Microsoft.Hosting.Lifetime | Hosting environment: Production 
+2025-08-22 15:01:19.6381 | INFO | Microsoft.Hosting.Lifetime | Content root path: /app 
+2025-08-22 15:01:41.4171 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.html - - - 
+2025-08-22 15:01:41.5283 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.html - 200 - text/html;charset=utf-8 112.6336ms 
+2025-08-22 15:01:41.5581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui-bundle.js - - - 
+2025-08-22 15:01:41.5592 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui-standalone-preset.js - - - 
+2025-08-22 15:01:41.5581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.js - - - 
+2025-08-22 15:01:41.5581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui.css - - - 
+2025-08-22 15:01:41.5581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.css - - - 
+2025-08-22 15:01:41.5630 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.js - 200 - application/javascript;charset=utf-8 4.6215ms 
+2025-08-22 15:01:41.5656 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/index.css'. Physical path: 'N/A' 
+2025-08-22 15:01:41.5660 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.css - 200 202 text/css 7.6546ms 
+2025-08-22 15:01:41.5835 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2025-08-22 15:01:41.5835 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2025-08-22 15:01:41.5860 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui.css - 200 154949 text/css 28.0062ms 
+2025-08-22 15:01:41.5860 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 27.2871ms 
+2025-08-22 15:01:41.6014 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2025-08-22 15:01:41.6027 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui-bundle.js - 200 1484234 text/javascript 44.2350ms 
+2025-08-22 15:01:41.7530 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - - - 
+2025-08-22 15:01:41.7530 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/favicon-16x16.png - - - 
+2025-08-22 15:01:41.7541 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+2025-08-22 15:01:41.7541 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-08-22 15:01:41.7553 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - 200 628 image/png 2.7367ms 
+2025-08-22 15:01:41.7553 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/favicon-16x16.png - 200 665 image/png 2.3266ms 
+2025-08-22 15:01:41.7779 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/v1/swagger.json - - - 
+2025-08-22 15:01:41.7830 | INFO | Microsoft.AspNetCore.Mvc.Infrastructure.DefaultActionDescriptorCollectionProvider | No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts 
+2025-08-22 15:01:41.8581 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 79.8093ms 
+2025-08-22 15:01:43.3821 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/apple-touch-icon-precomposed.png - - - 
+2025-08-22 15:01:43.3821 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/apple-touch-icon.png - - - 
+2025-08-22 15:01:43.3821 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/favicon.ico - - - 
+2025-08-22 15:01:43.3830 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/favicon-16x16.png - - - 
+2025-08-22 15:01:43.3830 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - - - 
+2025-08-22 15:01:43.3851 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+2025-08-22 15:01:43.3871 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-08-22 15:01:43.3871 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/favicon-16x16.png - 200 665 image/png 4.3752ms 
+2025-08-22 15:01:43.3871 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - 200 628 image/png 4.4249ms 
+2025-08-22 15:01:43.4000 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/favicon.ico - 404 0 - 17.1753ms 
+2025-08-22 15:01:43.4000 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/apple-touch-icon.png - 404 0 - 17.3225ms 
+2025-08-22 15:01:43.4000 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/apple-touch-icon-precomposed.png - 404 0 - 17.4227ms 
+2025-08-22 15:01:43.4021 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:8081/apple-touch-icon.png, Response status code: 404 
+2025-08-22 15:01:43.4021 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:8081/favicon.ico, Response status code: 404 
+2025-08-22 15:01:43.4021 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:8081/apple-touch-icon-precomposed.png, Response status code: 404 
+2025-08-22 15:01:46.3360 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.html - - - 
+2025-08-22 15:01:46.3390 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.html - 200 - text/html;charset=utf-8 2.3398ms 
+2025-08-22 15:01:46.3740 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui.css - - - 
+2025-08-22 15:01:46.3750 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.css - - - 
+2025-08-22 15:01:46.3772 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/index.css'. Physical path: 'N/A' 
+2025-08-22 15:01:46.3750 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui-standalone-preset.js - - - 
+2025-08-22 15:01:46.3761 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/index.js - - - 
+2025-08-22 15:01:46.3750 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/swagger-ui-bundle.js - - - 
+2025-08-22 15:01:46.3792 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2025-08-22 15:01:46.3892 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui.css - 200 154949 text/css 14.3577ms 
+2025-08-22 15:01:46.3850 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2025-08-22 15:01:46.3861 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.js - 200 - application/javascript;charset=utf-8 9.8544ms 
+2025-08-22 15:01:46.3806 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/index.css - 200 202 text/css 5.3542ms 
+2025-08-22 15:01:46.3920 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 16.4312ms 
+2025-08-22 15:01:46.4060 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2025-08-22 15:01:46.4072 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/swagger-ui-bundle.js - 200 1484234 text/javascript 31.7904ms 
+2025-08-22 15:01:46.5154 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - - - 
+2025-08-22 15:01:46.5169 | INFO | Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware | Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-08-22 15:01:46.5169 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/favicon-32x32.png - 200 628 image/png 1.8887ms 
+2025-08-22 15:01:46.5341 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/swagger/v1/swagger.json - - - 
+2025-08-22 15:01:46.5396 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/swagger/v1/swagger.json - 200 - application/json;charset=utf-8 4.7551ms 
+2025-08-22 15:02:02.1481 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/weatherforecast - - - 
+2025-08-22 15:02:02.1694 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'HTTP: GET /weatherforecast' 
+2025-08-22 15:02:02.1714 | FATAL | Program | hello world! 
+2025-08-22 15:02:02.1792 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'HTTP: GET /weatherforecast' 
+2025-08-22 15:02:02.1806 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/weatherforecast - 200 - application/json;+charset=utf-8 32.4865ms 
+2025-08-22 15:02:09.2750 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/2 GET https://localhost:8081/weatherforecast - - - 
+2025-08-22 15:02:09.2862 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executing endpoint 'HTTP: GET /weatherforecast' 
+2025-08-22 15:02:09.2869 | FATAL | Program | hello world! 
+2025-08-22 15:02:09.2889 | INFO | Microsoft.AspNetCore.Routing.EndpointMiddleware | Executed endpoint 'HTTP: GET /weatherforecast' 
+2025-08-22 15:02:09.2900 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/2 GET https://localhost:8081/weatherforecast - 200 - application/json;+charset=utf-8 15.1338ms 

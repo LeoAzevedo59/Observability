@@ -1,0 +1,27 @@
+services:
+  api:
+    env_file:
+      - ./.env
+    image: api:latest
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+      - 8081:443
+    volumes:
+      - ./logs:/logs
+      - ./certificates:/app/certificates
+      - ./temp-keys:/root/.aspnet/DataProtection-Keys
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=443
+      - Kestrel__Certificates__Default__Path=/app/certificates/certificate.pfx
+      - Kestrel__Certificates__Default__Password=123
+    networks:
+      - docker_network
+
+networks:
+  docker_network:
+    driver: bridge

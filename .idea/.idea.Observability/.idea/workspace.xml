@@ -9,15 +9,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e06832-5c9c-4cd0-a9cc-ae0249adf16f" name="Changes" comment="init commit">
+      <change afterPath="$PROJECT_DIR$/Observability/nlog.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Observability/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Observability/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observability/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Observability/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observability/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Observability/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observability/obj/Debug/net8.0/Observability.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Observability/obj/Debug/net8.0/Observability.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Observability/obj/Debug/net8.0/Observability.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Observability/obj/Debug/net8.0/Observability.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595e4f2361fd31cb66c7e9303f46cf8f2fe77d96eea9d0e42c17cae783aa74/ServiceCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Volumes/Samsung T7/dev/Observability/Observability/obj/Debug/net8.0/Observability.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -32,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.Observability: http.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -82,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755864852656</updated>
-      <workItem from="1755864854158" duration="627000" />
+      <workItem from="1755864854158" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />

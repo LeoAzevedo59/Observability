@@ -1,4 +1,14 @@
+using NLog;
+using NLog.Web;
+using Prometheus;
+
+var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+logger.Debug("init main");
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,8 +28,10 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/weatherforecast", (ILogger<Program> logger) =>
     {
+        logger.LogCritical("hello world!");
+
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
                 (
@@ -33,6 +45,16 @@ app.MapGet("/weatherforecast", () =>
     .WithName("GetWeatherForecast")
     .WithOpenApi();
 
+app.UseHttpMetrics(options =>
+{
+    // This will preserve only the first digit of the status code.
+    // For example: 200, 201, 203 -> 2xx
+    options.ReduceStatusCodeCardinality();
+});
+
+app.UseMetricServer();
+
+app.UseStaticFiles();
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

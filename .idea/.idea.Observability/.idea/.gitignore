@@ -1,0 +1,21 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+# Build
+*.dll
+*.pdb
+
+# User-specific files
+*.user
+*.DotSettings.user
+
+# Rider / JetBrains
+.idea/
+
+appsettings.Development.json
+appsettings.json
+
+.DS_Store

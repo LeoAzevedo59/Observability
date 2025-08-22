@@ -4,8 +4,13 @@
     <projectFile profileName="http">Observability/Observability.csproj</projectFile>
     <projectFile profileName="https">Observability/Observability.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e06832-5c9c-4cd0-a9cc-ae0249adf16f" name="Changes" comment="init commit" />
+    <list default="true" id="f0e06832-5c9c-4cd0-a9cc-ae0249adf16f" name="Changes" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Observability/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Observability/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755864852656</updated>
-      <workItem from="1755864854158" duration="319000" />
+      <workItem from="1755864854158" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />

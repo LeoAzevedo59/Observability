@@ -19,3 +19,26 @@ appsettings.Development.json
 appsettings.json
 
 .DS_Store
+
+# Logs da aplicação
+logs/
+*.log
+
+# Certificados e chaves
+certificates/
+temp-keys/
+
+# Grafana data
+grafana/
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+
+# VSCode settings
+.vscode/
+
+# Prometheus data (wal, lock, chunks, etc.)
+prometheus/*
+!prometheus.yaml

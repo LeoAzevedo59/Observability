@@ -18,8 +18,6 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
-
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -44,14 +42,13 @@ app.MapGet("/weatherforecast", (ILogger<Program> logger) =>
 
 app.UseHttpMetrics(options =>
 {
-    // This will preserve only the first digit of the status code.
-    // For example: 200, 201, 203 -> 2xx
     options.ReduceStatusCodeCardinality();
 });
 
 app.UseMetricServer();
-
 app.UseStaticFiles();
+app.UseHttpsRedirection();
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

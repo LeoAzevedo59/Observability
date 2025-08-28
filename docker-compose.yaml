@@ -1,15 +1,15 @@
 services:
-  api:
+  fidexa_api:
     env_file:
       - ./.env
-    image: api:latest
-    container_name: api
+    image: fidexa_api:latest
+    container_name: fidexa_api
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8080:80
-      - 8081:443
+      - "8080:80"
+      - "8081:443"
     volumes:
       - ./logs:/logs
       - ./certificates:/app/certificates
@@ -22,6 +22,19 @@ services:
     networks:
       - docker_network
 
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/prometheus
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - fidexa_api
+    networks:
+      - docker_network
+    
 networks:
   docker_network:
     driver: bridge

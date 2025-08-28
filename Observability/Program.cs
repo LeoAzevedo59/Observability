@@ -23,9 +23,13 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", (ILogger<Program> logger) =>
+app.MapGet("/weatherforecast", (ILogger<Program> loggerParam) =>
     {
-        logger.LogCritical("hello world!");
+        loggerParam.LogInformation("call to Program controller Information method");
+        loggerParam.LogDebug("call to Program controller Debug method");
+        loggerParam.LogError("call to Program controller Error method");
+        loggerParam.LogWarning("call to Program controller Warning method");
+        loggerParam.LogCritical("call to Program controller Critical method");
 
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast

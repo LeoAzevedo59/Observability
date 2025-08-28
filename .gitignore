@@ -42,3 +42,6 @@ grafana/
 # Prometheus data (wal, lock, chunks, etc.)
 prometheus/*
 !prometheus.yaml
+
+#Loki
+loki/

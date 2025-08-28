@@ -7,6 +7,7 @@ COPY Observability.sln .
 COPY ./Observability/Observability.csproj ./Observability/
 
 RUN dotnet restore
+RUN mkdir -p /logs && chmod 777 /logs
 
 COPY . .
 
@@ -19,5 +20,7 @@ WORKDIR /app
 COPY --from=build /out .
 
 EXPOSE 80
+
+RUN mkdir -p /logs && chown -R app:app /logs && chmod -R 755 /logs
 
 ENTRYPOINT ["dotnet", "Observability.dll"]

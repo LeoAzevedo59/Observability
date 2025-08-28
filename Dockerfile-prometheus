@@ -1,0 +1,4 @@
+FROM prom/prometheus
+WORKDIR /etc
+
+COPY prometheus.yaml ./prometheus/prometheus.yml

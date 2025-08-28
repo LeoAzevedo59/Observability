@@ -2,7 +2,7 @@ services:
   fidexa_api:
     env_file:
       - ./.env
-    image: fidexa_api:latest
+    image: fidexa/api:v1
     container_name: fidexa_api
     build:
       context: .
@@ -11,7 +11,6 @@ services:
       - "8080:80"
       - "8081:443"
     volumes:
-      - ./logs:/logs
       - ./certificates:/app/certificates
       - ./temp-keys:/root/.aspnet/DataProtection-Keys
     environment:
@@ -23,56 +22,47 @@ services:
       - docker_network
 
   prometheus:
-    image: prom/prometheus
+    image: fidexa/prometheus:v1
     container_name: prometheus
+    build:
+      context: .
+      dockerfile: Dockerfile-prometheus
+    depends_on:
+      - fidexa_api
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus:/prometheus
-      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
-    depends_on:
-      - fidexa_api
+      - ./fidexa/prometheus:/prometheus
     networks:
       - docker_network
     
   
   loki:
-    image: grafana/loki
+    image: fidexa/loki:v1
     container_name: loki
-    command:
-      - -config.file=/etc/loki/local-config.yaml
-      - -print-config-stderr=true
+    build:
+      context: .
+      dockerfile: Dockerfile-loki
     ports:
       - "3100:3100"
     volumes:
-      - ./loki:/data/loki
+      - ./fidexa/loki:/data/loki
     networks:
       - docker_network
   
-  promtail:
-    image: grafana/promtail
-    container_name: promtail
-    command: -config.file=/etc/promtail/config.yml
-    ports:
-      - "9080:9080"
-    volumes:
-      - ./logs:/logs
-      - ./promtail.yaml:/etc/promtail/config.yml
-    depends_on:
-      - loki
-      - fidexa_api
-    networks:
-      - docker_network
-
   grafana:
-    image: grafana/grafana
+    image: fidexa/grafana:v1
     container_name: grafana
+    build:
+      context: .
+      dockerfile: Dockerfile-grafana
+    depends_on:
+      - prometheus
+      - loki
     ports:
       - "3000:3000"
     volumes:
       - ./grafana:/var/lib/grafana
-    depends_on:
-      - prometheus
     networks:
       - docker_network
     environment:

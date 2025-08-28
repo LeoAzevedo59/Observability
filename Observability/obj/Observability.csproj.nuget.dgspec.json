@@ -47,13 +47,21 @@
               "target": "Package",
               "version": "[8.0.12, )"
             },
-            "NLog": {
+            "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[8.0.3, )"
             },
-            "NLog.Web.AspNetCore": {
+            "Serilog.Settings.Configuration": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[8.0.4, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.Grafana.Loki": {
+              "target": "Package",
+              "version": "[8.3.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

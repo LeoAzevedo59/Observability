@@ -1,14 +1,23 @@
-using NLog;
-using NLog.Web;
+using Observability.Middleware;
 using Prometheus;
+using Serilog;
 
-var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
-logger.Debug("init main");
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", true)
+    .Build();
+
+Log.Logger = new LoggerConfiguration()
+    .Enrich.FromLogContext()
+    .ReadFrom.Configuration(configuration)
+    .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog();
+
 builder.Logging.ClearProviders();
-builder.Host.UseNLog();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -23,13 +32,10 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", (ILogger<Program> loggerParam) =>
+app.MapGet("/weatherforecast", (ILogger<Program> logger) =>
     {
-        loggerParam.LogInformation("call to Program controller Information method");
-        loggerParam.LogDebug("call to Program controller Debug method");
-        loggerParam.LogError("call to Program controller Error method");
-        loggerParam.LogWarning("call to Program controller Warning method");
-        loggerParam.LogCritical("call to Program controller Critical method");
+        var user = new User(Guid.NewGuid(), "Léo", "leo@email.com");
+        logger.LogInformation("Usuário logado {0}", user);
 
         var forecast = Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
@@ -53,9 +59,15 @@ app.UseMetricServer();
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 
+app.UseMiddleware<RequestLogContextMiddleware>();
+
+app.UseSerilogRequestLogging();
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+record User(Guid Id, string Name, string Email);

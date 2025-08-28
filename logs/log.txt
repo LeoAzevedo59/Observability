@@ -1929,3 +1929,11 @@
 2025-08-28 02:11:53.3269 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 57.5607ms 
 2025-08-28 02:12:08.2670 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://fidexa_api:80/metrics - - - 
 2025-08-28 02:12:08.2905 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 24.5635ms 
+2025-08-28 02:12:23.2815 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://fidexa_api:80/metrics - - - 
+2025-08-28 02:12:23.3142 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 34.7739ms 
+2025-08-28 02:12:38.2708 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://fidexa_api:80/metrics - - - 
+2025-08-28 02:12:38.3023 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 34.0003ms 
+2025-08-28 02:12:53.2748 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://fidexa_api:80/metrics - - - 
+2025-08-28 02:12:53.2975 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 26.5592ms 
+2025-08-28 02:13:08.2716 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request starting HTTP/1.1 GET http://fidexa_api:80/metrics - - - 
+2025-08-28 02:13:08.2984 | INFO | Microsoft.AspNetCore.Hosting.Diagnostics | Request finished HTTP/1.1 GET http://fidexa_api:80/metrics - 200 - application/openmetrics-text;+version=1.0.0;+charset=utf-8 29.5182ms 

@@ -45,6 +45,7 @@ prometheus/
 
 #Loki
 loki/
+loki-data/
 
-#fidexa
-fidexa/
+#Data
+data/

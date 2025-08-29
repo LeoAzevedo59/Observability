@@ -40,7 +40,7 @@ grafana/
 .vscode/
 
 # Prometheus data (wal, lock, chunks, etc.)
-prometheus/*
+prometheus/
 !prometheus.yaml
 
 #Loki

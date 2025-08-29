@@ -45,3 +45,6 @@ prometheus/
 
 #Loki
 loki/
+
+#fidexa
+fidexa/
